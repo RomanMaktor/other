@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>1.2 Нахождение экстремумов</title>
+  <script src="extr.js"></script>
+</head>
+
+<body>
+  <h3> Наибольшая по абсолютной величине разность соседних элементов в массиве: </h3>
+  <input id='id' type="text" style="font-size: 30px;">
+  <h1>
+    <div></div>
+    <div id='res'></div>
+  </h1>
+  <br>
+  <p> см. <b>extr.js</b> </p>
+
+  <script>
+    document.getElementById('id').value = '1,2,4,4,5';
+    document.getElementById('res').innerHTML = 'Ответ: ' + start(document.body.children[1]);
+
+    var inp = document.body.children[1];
+    inp.oninput = function () {
+      var result = start(inp);
+      document.getElementById('res').innerHTML = 'Ответ: ' + result;
+    };
+  </script>
+
+</body>
+
+</html>
